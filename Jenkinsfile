@@ -19,5 +19,12 @@ pipeline {
         sh 'docker build -t autoopsltd/spring-petclinic:latest .'
       }
     }
+    stage('Docker Push') {
+      agent any
+      steps {
+        sh 'docker tag autoopsltd/spring-petclinic:latest localhost:5000/autoopsltd/spring-petclinic:latest'
+        sh 'docker push localhost:5000/autoopsltd/spring-petclinic:latest'
+      }
+    }
   }
 }
