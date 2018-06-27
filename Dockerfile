@@ -1,4 +1,4 @@
 FROM anapsix/alpine-java
 LABEL maintainer="autoopsltd@outlook.com"
-COPY /target/spring-petclinic-1.5.1.jar /home/spring-petclinic-1.5.1.jar
+COPY /target/spring-petclinic-2.0.0.jar /home/spring-petclinic-2.0.0.jar
 CMD ["java","-jar","/home/spring-petclinic-1.5.1.jar"]
